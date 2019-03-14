@@ -49,15 +49,17 @@ public class SoNguyenTo {
         while (this.isSoNguyenTo(n) == false){
             n++;
         }
+        this.a = n;
         return n;
     }
 
     public static void main(String[] args){
         SoNguyenTo obj = new SoNguyenTo(3);
         System.out.println("So a la: "+obj.a);
-        System.out.println("So NT tiep theo cua "+obj.a+" la: "+obj.timSoNguyenToNext());
-
-        obj.setA(8);
-        System.out.println("So NT tiep theo cua "+obj.a+" la: "+obj.timSoNguyenToNext());
+        for (int i=0; i<10; i++){
+            System.out.println("So NT tiep theo cua " + obj.a + " la: " + obj.timSoNguyenToNext());
+        }
+        //obj.setA(8);
+        //System.out.println("So NT tiep theo cua "+obj.a+" la: "+obj.timSoNguyenToNext());
     }
 }
