@@ -1,5 +1,6 @@
 package Session3;
 import java.util.Scanner;
+import java.util.ArrayList;
 public class Fraction {
     private int tuso;
     private int mauso;
@@ -72,13 +73,30 @@ public class Fraction {
         this.Inps();
     }
 
+    public Fraction Cong(Fraction ps1, Fraction ps2){
+        int tuso = ps1.tuso*ps2.mauso + ps2.tuso*ps1.mauso;
+        int mauso = ps1.mauso*ps2.mauso;
+        Fraction ps3 = new Fraction(tuso, mauso);
+        return ps3;
+    }
+
     public static void main(String[] args){
-        Fraction ps = new Fraction(15,20);
+        ArrayList<Fraction> arr = new ArrayList<>();
+        arr.add(new Fraction(2, 10));
+        arr.add(new Fraction(3, 9));
+        arr.add(new Fraction(4, 6));
+        arr.add(new Fraction(8, 2));
+        arr.add(new Fraction(20, 15));
+        for (int i=0; i<arr.size(); i++){
+            arr.get(i).Rutgon();
+        }
         //In phan so
-        ps.Inps();
+
         //Rut gon
-        ps.Rutgon();
+
         //Nghich dao
-        ps.Nghichdao();
+
+        //Fraction ps3 = ps.Cong(ps, ps1);
+        //ps3.Rutgon();
     }
 }
