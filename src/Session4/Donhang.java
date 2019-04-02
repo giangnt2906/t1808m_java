@@ -1,7 +1,7 @@
 package Session4;
 import java.util.ArrayList;
 public class Donhang {
-    private double tongtien = 0;
+    private double tongtien;
     private ArrayList<Sanpham> cart = new ArrayList<>();
 
 
