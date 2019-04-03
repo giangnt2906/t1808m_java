@@ -66,12 +66,19 @@ public class Hotel {
             j++;
         }
 
-        System.out.println("Search with owner name: ");
-        Scanner search = new Scanner(System.in);
-        String str = search.nextLine();
-        for (Hotel ht: hotels){
-            if (ht.getOwnerName().equalsIgnoreCase(str)){
-                ht.KetQua();
+        while (1==1) {
+            System.out.println("Search with owner name: ");
+            Scanner search = new Scanner(System.in);
+            String str = search.nextLine();
+            for (Hotel ht : hotels) {
+                if (ht.getOwnerName().equalsIgnoreCase(str)) {
+                    ht.KetQua();
+                }
+            }
+            System.out.println("Type 'N' or 'n' to exit");
+            String count = search.nextLine();
+            if (count.equalsIgnoreCase("N")) {
+                break;
             }
         }
     }
