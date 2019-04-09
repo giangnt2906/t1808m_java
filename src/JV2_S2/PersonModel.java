@@ -17,36 +17,32 @@ public class PersonModel<T> {
         }
     }
 
-// Method Inthongtin. Chay vong lap qua toan bo ArrayList cua PersonModel, phan tu nao co dang du lieu la Student thi in kieu Student. Phan tu nao thuoc dang du lieu Employee thi in kieu theo Employee
-    public void InThongTin(){
-        for (T obj: lists) {
-            if (obj instanceof Student){
-                ((Student) obj).InThongTinHS();
-            } else if (obj instanceof Employee){
-                ((Employee) obj).InThongTinNV();
-            }
-        }
-    }
-
     public static void main(String[] args){
 
-        // Khoi tao doi tuong danhsach cua PersonModel
-        PersonModel danhsach = new PersonModel();
+        // Khoi tao doi tuong danhsach1 luu kieu du lieu Student cua PersonModel
+        PersonModel<Student> danhsach1 = new PersonModel<>();
+        // Khoi tao doi tuong danhsach2 luu kieu du lieu Employee cua PersonModel
+        PersonModel<Employee> danhsach2 = new PersonModel<>();
 
         // Khoi tao 2 hoc sinh bat ki va them vao doi tuong danhsach
         Student student1 = new Student("01","khanh",20);
         Student student2 = new Student("02","son",22);
-        danhsach.Them(student1);
-        danhsach.Them(student2);
+        danhsach1.Them(student1);
+        danhsach1.Them(student2);
 
         // Khoi tao 2 nhan vien bat ki va them vao doi tuong danhsach
         Employee nvien1 = new Employee("03", "thao", 190.00);
         Employee nvien2 = new Employee("04", "van", 150.75);
 
-        danhsach.Them(nvien1);
-        danhsach.Them(nvien2);
+        danhsach2.Them(nvien1);
+        danhsach2.Them(nvien2);
 
-        // Su dung method InThongTin cua danhsach de in toan bo thong tin cua ca Student lan Employee
-        danhsach.InThongTin();
+        // In dach sach su dung toString()
+        for (Student st: danhsach1.lists){
+            st.InThongTinHS();
+        }
+        for (Employee nv: danhsach2.lists){
+            nv.InThongTinNV();
+        }
     }
 }

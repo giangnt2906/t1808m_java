@@ -11,8 +11,11 @@ public class Student {
         this.age=age;
     }
 
+    public String toString(){
+        return ("Hoc sinh: "+this.id+"---"+this.name+"--- tuoi: "+this.age);
+    }
+
     public void InThongTinHS(){
-       // System.out.println(this.toString());
-        System.out.println("Hoc sinh: "+this.id+"---"+this.name+"--- tuoi: "+this.age);
+        System.out.println(this.toString());
     }
 }

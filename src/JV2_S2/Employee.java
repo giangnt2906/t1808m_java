@@ -11,8 +11,11 @@ public class Employee {
         this.salary=salary;
     }
 
+    public String toString(){
+        return ("Nhan vien: "+this.id+"---"+this.name+"--- luong: "+this.salary);
+    }
+
     public void InThongTinNV(){
-       // System.out.println(this.toString());
-        System.out.println("Nhan vien: "+this.id+"---"+this.name+"--- luong: "+this.salary);
+        System.out.println(this.toString());
     }
 }
