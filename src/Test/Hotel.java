@@ -47,7 +47,7 @@ public class Hotel {
 
     public static void main(String[] args){
         ArrayList<Hotel> hotels = new ArrayList<>();
-        for (int i=0; i<10; i++){
+        for (int i=0; i<3; i++){
             hotels.add(new Hotel());
         }
 
@@ -66,20 +66,16 @@ public class Hotel {
             j++;
         }
 
-        while (1==1) {
+
             System.out.println("Search with owner name: ");
             Scanner search = new Scanner(System.in);
             String str = search.nextLine();
+
             for (Hotel ht : hotels) {
                 if (ht.getOwnerName().equalsIgnoreCase(str)) {
                     ht.KetQua();
                 }
-            }
-            System.out.println("Type 'N' or 'n' to exit");
-            String count = search.nextLine();
-            if (count.equalsIgnoreCase("N")) {
-                break;
-            }
-        }
+
     }
+}
 }
