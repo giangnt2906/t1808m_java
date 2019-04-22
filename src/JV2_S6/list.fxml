@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="JV2_S6.List" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView fx:id="txtTableView" layoutX="14.0" layoutY="8.0" prefHeight="323.0" prefWidth="570.0">
+        <columns>
+          <TableColumn fx:id="txtId" prefWidth="42.0" text="ID" />
+            <TableColumn fx:id="txtUser" prefWidth="117.0" text="Username" />
+            <TableColumn fx:id="txtPass" prefWidth="108.0" text="Password" />
+            <TableColumn fx:id="txtEmail" prefWidth="233.0" text="Email" />
+            <TableColumn fx:id="txtStatus" prefWidth="69.0" text="Status" />
+        </columns>
+      </TableView>
+      <Hyperlink onAction="#backLogin" layoutX="263.0" layoutY="349.0" text="&lt;&lt; Back " />
+   </children>
+</Pane>

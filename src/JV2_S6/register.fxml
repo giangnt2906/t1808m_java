@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="JV2_S6.Register" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="txtUser" layoutX="105.0" layoutY="61.0" prefHeight="31.0" prefWidth="390.0" text="Username" />
+      <TextField fx:id="txtEmail" layoutX="105.0" layoutY="125.0" prefHeight="31.0" prefWidth="390.0" text="Email" />
+      <TextField fx:id="txtPass" layoutX="105.0" layoutY="185.0" prefHeight="31.0" prefWidth="390.0" text="Password" />
+      <Button onAction="#submitRegister" layoutX="203.0" layoutY="244.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="194.0" text="Register" />
+      <Hyperlink onAction="#backLogin" layoutX="238.0" layoutY="305.0" text="&lt;&lt; Back to Login" />
+   </children>
+</Pane>
