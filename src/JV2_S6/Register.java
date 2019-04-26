@@ -18,7 +18,8 @@ public class Register {
         String insert_sql = "INSERT INTO user (username, email, password, status) VALUES ('"+user+"', '"+email+"', '"+pass+"', '1')";
         connector.updateQuery(insert_sql);
 
-        System.out.println("Dang ky thanh cong");
+        Parent list = FXMLLoader.load(getClass().getResource("list.fxml"));
+        Main.mainStage.getScene().setRoot(list);
     }
 
     public void backLogin() throws Exception{

@@ -3,8 +3,9 @@ package JV2_S6;
 import java.sql.*;
 
 public class Connector {
-    public Connection conn;
-    public Connector(){
+    private Connection conn;
+    private static Connector instance;
+    private Connector(){
         try{
             Class.forName("com.mysql.jdbc.Driver");
             String Url = "jdbc:mysql://localhost:3306/t1808m";
@@ -14,6 +15,13 @@ public class Connector {
         } catch (Exception e){
             e.printStackTrace();
         }
+    }
+
+    public static Connector getInstance() {
+        if (instance == null){
+            instance = new Connector();
+        }
+        return instance;
     }
 
     public ResultSet getQuery(String sql) throws Exception{

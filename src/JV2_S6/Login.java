@@ -22,7 +22,8 @@ public class Login {
             Parent list = FXMLLoader.load(getClass().getResource("list.fxml"));
             Main.mainStage.getScene().setRoot(list);
         } else {
-            System.out.println("Dang nhap that bai");
+            Parent list = FXMLLoader.load(getClass().getResource("login.fxml"));
+            Main.mainStage.getScene().setRoot(list);
         }
 
     }
